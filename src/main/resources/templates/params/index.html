@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${tituloParamIdx}"></title>
+</head>
+<body>
+  <h1 th:text="${tituloParamIdx}"></h1>
+  <ul>
+    <li>
+      <a th:href="@{/params/string(texto='Hola Hector')}">Enviar por parámetro: Hola Hector </a>
+    </li>
+    <li>
+      <a th:href="@{/params/string(texto='Que tal Romy!')}">Enviar por parámetro: Que tal Romy! </a>
+    </li>
+    <li>
+      <a th:href="@{/params/mix-params(saludo='Cómo estas Romy!', numero = 2)}">Enviar por parámetro: Cómo estas Romy! </a>
+    </li>
+    <li>
+      <a th:href="@{/params/mix-params-servlet(saludo='Cómo estas Romy!', numero = 2)}">Enviar por parámetro: Cómo estas Romy! </a>
+    </li>
+  </ul>
+</body>
+</html>
